@@ -22,12 +22,17 @@ public class HelloWorldRestController {
     @Autowired
     UserService userService;    // Service which will do all data retrieval/manipulation work
 
+    @RequestMapping("/")
+    public String root() {
+        return "Hello world!";
+    }
+
     /**
      * Root API
      *
      * @return ResponseEntity of Diagnostic
      */
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    /*@RequestMapping(value = "/", method = RequestMethod.GET)
     public ResponseEntity<Diagnostic> root() {
         try {
             Diagnostic diagnostic = new Diagnostic(HttpStatus.OK, new Date().getTime());
@@ -36,7 +41,7 @@ public class HelloWorldRestController {
             e.printStackTrace();
             return new ResponseEntity<Diagnostic>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
-    }
+    }*/
 
     /**
      * Retrieve all users API
