@@ -13,7 +13,7 @@
         <java.version>1.8</java.version>
         <springframework.version>5.0.2.RELEASE</springframework.version>
         <springboot.version>1.5.9.RELEASE</springboot.version>
-        <jackson.version>2.9.10.4</jackson.version>
+        <jackson.version>2.13.4.1</jackson.version>
     </properties>
 
     <dependencies>
